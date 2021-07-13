@@ -105,9 +105,18 @@ function changeResultWin() {
 
 function playRound(playerChoice) {
 	const computerSelection = computerPlay();
-	console.log(playerChoice);
-	console.log(computerSelection);
 	let result;
+	const li = document.createElement('li');
+
+	if (playerScore + computerScore < 5) {
+		ul.appendChild(li);
+		li.textContent = `${computerSelection}-${playerChoice}`;
+		ul.scrollTop = ul.scrollHeight;
+	}
+
+	if (ul.childElementCount === 6) {
+		ul.removeChild(ul.childNodes[0]);
+	}
 
 	if (playerChoice === 'refresh') {
 		playerScore = 0;
@@ -127,28 +136,16 @@ function playRound(playerChoice) {
 		if (computerSelection === 'PAPER') {
 			computerChoice.textContent = 'PAPER';
 			changeComputerChoice();
-			const li = document.createElement('li');
-			ul.appendChild(li);
-			li.textContent = `${playerChoice}-${computerPlay()}`;
-			ul.scrollTop = ul.scrollHeight;
 			computerScore++;
 			result = 'computer';
 		} else if (computerSelection === 'SCISSORS') {
 			computerChoice.textContent = 'SCISSORS';
 			changeComputerChoice();
-			const li = document.createElement('li');
-			ul.appendChild(li);
-			li.textContent = `${playerChoice}-${computerPlay()}`;
-			ul.scrollTop = ul.scrollHeight;
 			playerScore++;
 			result = 'player';
 		} else if (computerSelection === 'ROCK') {
 			computerChoice.textContent = 'ROCK';
 			changeComputerChoice();
-			const li = document.createElement('li');
-			ul.appendChild(li);
-			li.textContent = `${playerChoice}-${computerPlay()}`;
-			ul.scrollTop = ul.scrollHeight;
 			return;
 		}
 	}
@@ -157,28 +154,16 @@ function playRound(playerChoice) {
 		if (computerSelection === 'ROCK') {
 			computerChoice.textContent = 'ROCK';
 			changeComputerChoice();
-			const li = document.createElement('li');
-			ul.appendChild(li);
-			li.textContent = `${playerChoice}-${computerPlay()}`;
-			ul.scrollTop = ul.scrollHeight;
 			playerScore++;
 			result = 'player';
 		} else if (computerSelection === 'SCISSORS') {
 			computerChoice.textContent = 'SCISSORS';
 			changeComputerChoice();
-			const li = document.createElement('li');
-			ul.appendChild(li);
-			li.textContent = `${playerChoice}-${computerPlay()}`;
-			ul.scrollTop = ul.scrollHeight;
 			computerScore++;
 			result = 'computer';
 		} else if (computerSelection === 'PAPER') {
 			computerChoice.textContent = 'PAPER';
 			changeComputerChoice();
-			const li = document.createElement('li');
-			ul.appendChild(li);
-			li.textContent = `${playerChoice}-${computerPlay()}`;
-			ul.scrollTop = ul.scrollHeight;
 			return;
 		}
 	}
@@ -187,28 +172,16 @@ function playRound(playerChoice) {
 		if (computerSelection === 'ROCK') {
 			computerChoice.textContent = 'ROCK';
 			changeComputerChoice();
-			const li = document.createElement('li');
-			ul.appendChild(li);
-			li.textContent = `${playerChoice}-${computerPlay()}`;
-			ul.scrollTop = ul.scrollHeight;
 			computerScore++;
 			result = 'computer';
 		} else if (computerSelection === 'PAPER') {
 			computerChoice.textContent = 'PAPER';
 			changeComputerChoice();
-			const li = document.createElement('li');
-			ul.appendChild(li);
-			li.textContent = `${playerChoice}-${computerPlay()}`;
-			ul.scrollTop = ul.scrollHeight;
 			playerScore++;
 			result = 'player';
 		} else if (computerSelection === 'SCISSORS') {
 			computerChoice.textContent = 'SCISSORS';
 			changeComputerChoice();
-			const li = document.createElement('li');
-			ul.appendChild(li);
-			li.textContent = `${playerChoice}-${computerPlay()}`;
-			ul.scrollTop = ul.scrollHeight;
 			return;
 		}
 	}
