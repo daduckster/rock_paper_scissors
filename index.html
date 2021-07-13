@@ -6,10 +6,68 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Comfortaa:wght@300;400;500;600;700&family=Dosis:wght@200;300;400;500;600;700;800&family=Pangolin&family=Patrick+Hand&family=Yomogi&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
 </head>
 
 <body>
+
+    <header id="header">
+        <div>
+            <h1>ROCK, PAPER</h1>
+            <h1>& SCISSORS</h1>
+            <p id="title-paragraph">CHOOSE YOUR PAW!</p>
+        </div>
+        <div id="title-right">
+            <div id="results-container">
+                <div id="results-left">
+                    <p id="score-header">SCORE:</p>
+                    <div id="results">
+                        <div class="result-plates">
+                            <p>CAT</p>
+                            <p id="cat-score" class="scores">0</p>
+                        </div>
+                        <div class="result-plates">
+                            <p>YOU</p>
+                            <p id="user-score" class="scores">0</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="results-right">
+            <ul id="track"></ul>
+        </div>
+
+    </header>
+
+    <main id="main">
+        <div>
+            <div id="cat-choice-container">
+                <img src="Cat.svg" alt="cat-head-image" id="cat-head-image" class="cat-head-image">
+                <p id="cat-choice-paragraph">YOUR CAT-OPPONENT CHOOSES...</p>
+                <p id="cat-choice">hmmm...</p>
+            </div>
+            <div id="result">
+                <p id="result-paragraph"></p>
+                <div id=refresh-container>
+                    <p id="again"></p>
+                    <input type="image" src="Refresh.svg" name="refresh" id="refresh-button">
+                </div>
+
+            </div>
+        </div>
+        <div id="submit-container">
+            <input id="rock" type="image" src="Rock.svg" name="rock" class="submit-image">
+            <input id="paper" type="image" src="Paper.svg" name="paper" class="submit-image">
+            <input id="scissors" type="image" src="Scissors.svg" name="scissors" class="submit-image">
+        </div>
+
+    </main>
 
 </body>
 
