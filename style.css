@@ -219,7 +219,7 @@ h1 {
 
 
 #refresh-button {
-    width: 4.2vw;
+    height: 6.8vh;
     transition: all .07s ease;
     position: relative;
     z-index: 10;
